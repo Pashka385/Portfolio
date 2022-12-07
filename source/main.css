@@ -1,0 +1,18 @@
+body{background-color: #999;}
+.img{
+    margin: 0;
+    position: relative;
+    left: 10%;
+    width: 500px;
+    height: 350px;
+    background-repeat: no-repeat;
+    
+}
+.slick-dots li{
+    width: 40px;
+    height: 40px;
+}
+.slider__item{
+    border-radius: 5px;
+    margin-left: 30px;
+}

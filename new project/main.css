@@ -1,0 +1,288 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200&display=swap');   
+*{
+    margin: 0;
+    padding: 0%;
+}
+
+body{
+    background-color: rgb(26, 136, 231);
+}
+.header{
+    width: 100%;
+    height: 70px;
+    display: block;
+    position: fixed ;
+    font-family: 'Dancing Script', cursive;
+    font-weight: bolder;
+    color: white;
+    font-size: 39px;
+    text-align: center;
+    margin-top: 6px;
+}
+
+.New_logo{margin-left: 20%;
+font-size: 80px;
+color: #fff;
+font-family: 'Oswald', sans-serif;
+width: 90px;height: 60px;
+margin-top: 85px;}
+
+.text_1{
+    display: block;
+    position: absolute;
+    color: #fff;
+    font-size: 22px;
+    font-family: 'Oswald', sans-serif;
+    font-weight: bolder;
+    margin-top: 3.5%;
+    margin-left: 19%;
+}
+.img_1{
+    position: fixed;
+    margin-left: 30%;
+    margin-top: -8%;
+    height: 500px;
+    width: 400;
+    margin-right:3%;
+    transform: rotate(-6    deg);
+}
+.main_but{
+    background-color: rgb(8, 147, 240);
+    width: 130px;
+    height: 35px;
+    border-radius: 8px;border-color: #fff;
+    font-weight: bolder;
+    font-family: 'Oswald', sans-serif;
+    color: #fff;
+    font-size: 17px;
+    margin-left: 26%;
+    margin-top: 4px;
+    opacity: 0.7;
+    box-shadow: 0px 0px 2px;
+    transition: 0.5s ease-in-out;
+}
+
+.main_but:hover{
+    transition-duration: 0.5s;
+    transition-timing-function: ease-in-out;
+    box-shadow: 0px 1px 0px;
+    border-style: none;
+    background-color: rgb(40, 38, 170);
+}
+
+
+.img_2{
+    margin-top: 5%;
+    margin-left: 7.5%;
+    width: 420px;
+    height: 390px;
+}
+.header_second{
+font-size: 80px;
+color: #fff;
+font-family: 'Oswald', sans-serif;
+width: 90px;height: 45px;
+margin-top: 24%;
+margin-left: 40%;
+}
+
+.text_2{
+    color: #fff;
+    font-size: 26px;
+    font-family: 'Oswald', sans-serif;
+    font-weight: bolder;
+    margin-top: 5%;
+    text-align: center;
+}
+.second_but{
+    background-color: rgb(8, 147, 240);
+    width: 130px;
+    height: 35px;
+    border-radius: 8px;border-color: #fff;
+    font-weight: bolder;
+    font-family: 'Oswald', sans-serif;
+    color: #fff;
+    font-size: 17px;
+    margin-left: 46.5%;
+    margin-top: 60px;
+    opacity: 0.7;
+    box-shadow: 0px 0px 2px;
+    transition: all 0.5s ease-in-out;
+}
+
+
+.second_but:hover{
+    transition-duration: 0.5s;
+    transition-timing-function: ease-in-out;
+    box-shadow: 0px 1px 0px;
+    border-style: none;
+    background-color: rgb(40, 38, 170);
+}
+
+
+.text_area_1{
+    width: 240px;
+    height: 150px;
+    background-color: rgb(8, 147, 240);
+    color: rgb(255, 255, 255);
+    position: relative;
+    float: left;
+    text-align: center;
+    border-radius: 8px;
+    border-color: #fff;
+    border-style: outset;
+    font-weight: bolder;
+    font-family: 'Oswald', sans-serif;
+    font-weight: bolder;
+    font-size: 19px;
+    line-height: -2px;
+    margin-top: 8%;
+    margin-left: 9%;
+
+}
+
+.text_area_2{
+    width: 240px;
+    height: 150px;
+    background-color: rgb(8, 147, 240);
+    color: rgb(255, 255, 255);
+    position: relative;
+    float: right;
+    text-align: center;
+    border-radius: 8px;
+    border-color: #fff;
+    border-style: outset;
+    font-weight: bolder;
+    font-family: 'Oswald', sans-serif;
+    font-weight: bolder;
+    font-size: 19px;
+    line-height: -2px;
+    margin-right: 7%;
+    margin-top: 7%;
+
+}
+.send{
+    box-shadow: inset 0 0 0 0 #54b3d6;
+    color: #54b3d6;
+    margin: 0 -.30rem;
+    padding: 0 .25rem;
+    transition: color .3s ease-in-out, box-shadow .3s ease-in-out;
+    background-color: #326bc0;
+    width: 90px;
+    height: 30px;
+    margin-left: 42.5%;
+    float: left;
+    margin-top: 10px;
+    text-align: center;
+    line-height: 30px;
+    text-decoration: none;
+    border-radius: 8px;
+    border-width: 2px;
+    border-style: solid;
+    font-family: 'Dancing Script', cursive;
+  }
+  .send:hover {
+    box-shadow: inset 100px 0 0 0 #54b3d6;
+    color: white;font-size: 22px;
+    font-family: 'Dancing Script', cursive;
+    font-weight: bolder;
+  } 
+
+.header_information{
+        margin-left: 35.5%; 
+        font-size: 76px;
+        color: #fff;
+        font-family: 'Oswald', sans-serif;
+        width: 90px;height: 60px;
+        margin-top: 85px;}
+
+.text_news{
+    color: #fff;
+    font-size: 21.5px;
+    font-family: 'Oswald', sans-serif;
+    font-weight: bolder;
+    margin-top: 5%;
+    margin-left: 3%;
+    text-align: center;
+}
+
+.news_but{
+    box-shadow: inset 0 0 0 0 #54b3d6;
+    color: #54b3d6;
+    margin: 0 -.30rem;
+    padding: 0 .25rem;
+    transition: color .3s ease-in-out, box-shadow .3s ease-in-out;
+    background-color: #326bc0;
+    width: 90px;
+    height: 30px;
+    margin-left: 47.5%;
+    float: left;
+    margin-top: 20px;
+    text-align: center;
+    line-height: 30px;
+    text-decoration: none;
+    border-radius: 8px;
+    border-width: 2px;
+    border-style: solid;
+    font-family: 'Dancing Script', cursive;
+  }
+  .news_but:hover {
+    box-shadow: inset 100px 0 0 0 #54b3d6;
+    color: white;font-size: 23px;
+    font-family: 'Dancing Script', cursive;
+    font-weight: bolder;
+  } 
+
+  .logo_img{
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-left: -9.4%;
+    margin-top: 5%;
+    border-color: white;
+    border-style: solid;
+  }
+
+.footer{
+    color: #fff;
+    margin-top: 30px;
+    font-size: 25px;
+    font-family:'Oswald', sans-serif;
+    border-top: 2px;
+    border-style: solid;
+    border-color: #fff;
+    border-left: 0px;
+    border-right: 0px;
+    border-bottom: 0px;
+        
+}
+  
+.aside{
+    float: left;
+    margin-top: 0;
+    width: 45px;
+    height: 90vh;
+    background-color: rgb(26, 136, 231);
+    
+}
+
+.tg{
+    border-radius: 50%;
+    width: 45px;
+    height: 44px;
+    margin-top: 40px;
+    margin-left: 5px;
+}
+
+.tg:hover{
+    width: 50px;
+    height: 50px;
+    margin-left: 25px;
+    transition: all 0.25s ease-in-out;
+}
+
+::-webkit-scrollbar{width: 13px;}
+::-webkit-scrollbar-thumb{background-color: white;border-radius: 6px;}
+::-webkit-scrollbar-thumb:hover{background-color: rgb(26, 136, 231);}
+::selection{background-color: #326bc0;}
