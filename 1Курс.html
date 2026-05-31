@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Портфолио студента - Первый курс</title>
+    <link rel="stylesheet" href="./Style.css">
+    <style>
+        .certificates-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 30px;
+            padding: 20px;
+        }
+        
+        .certificate-item {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+        }
+        
+        .certificate-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+        }
+        
+        .certificate-item img {
+            width: 100%;
+            height: 400px;
+            object-fit: contain;
+            border-bottom: 1px solid #eee;
+            padding: 15px;
+            background: white;
+        }
+        
+        .certificate-item p {
+            padding: 15px;
+            text-align: center;
+            color: #555;
+            font-size: 1rem;
+            margin-top: auto;
+            background: #f8f9fa;
+            border-top: 1px solid #eee;
+        }
+        
+        /* Модальное окно */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,0.9);
+            overflow: auto;
+        }
+        
+        .modal-content {
+            margin: auto;
+            display: block;
+            max-width: 90%;
+            max-height: 90%;
+            margin-top: 2%;
+        }
+        
+        .modal-caption {
+            margin: 15px auto;
+            text-align: center;
+            color: white;
+            font-size: 1.2rem;
+            max-width: 80%;
+        }
+        
+        .close {
+            position: absolute;
+            top: 20px;
+            right: 30px;
+            color: white;
+            font-size: 40px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        
+        .close:hover {
+            color: #cd99d0;
+        }
+        .horizontal-container{
+            width: 100%;
+            min-height: 100px;
+            background-color: green;
+        }
+        .horizontal-grid{
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 30px;
+            padding: 20px;
+        }
+        .horizontal-item{
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <header class="header">
+            <h2 class="site-title">Сайт портфолио студента</h2>
+        </header>
+        
+        <aside class="sidebar">
+            <nav class="navigation">
+                <a class="nav-link" href="index.html">Главная</a>
+                <a class="nav-link active" href="1Курс.html">Первый курс</a>
+                <a class="nav-link" href="2Курс.html">Второй курс</a>
+                <a class="nav-link" href="3Курс.html">Третий курс</a>
+    
+            </nav>
+        </aside>
+        
+        <main class="content">
+            <h2 class="content-title">Грамоты и сертификаты</h2>
+            <div class="certificates-grid">
+                <div class="certificate-item" onclick="openModal('./1 курс/Свидетельство 1курс.jpg', 'Свидетельство участника Всероссийской олимпиады Интернет не во вред')">
+                    <img src="./1 курс/Свидетельство 1курс.jpg" alt="Свидетельство участника Всероссийской олимпиады">
+                    <p>Свидетельство участника Всероссийской олимпиады "Интернет не во вред"</p>
+                </div>
+                <div class="certificate-item" onclick="openModal('./1 курс/Сценка нг 1курс.jpg', 'Новогодняя сценка')">
+                    <img src="./1 курс/Сценка нг 1курс.jpg" alt="Сценка на Новый год">
+                    <p>Участие в новогоднем мероприятии</p>
+                </div>
+                <div class="certificate-item" onclick="openModal('./1 курс/ФинЗАчет 1 курс.jpg', 'Сертификат участникак онлайн зачета по финансовой грамотности')">
+                    <img src="./1 курс/ФинЗАчет 1 курс.jpg" alt="Сертификат участникак онлайн зачета по финансовой грамотности">
+                    <p>Сертификат участникак онлайн зачета по финансовой грамотности</p>
+                </div>
+                <div class="certificate-item" onclick="openModal('/1 курс/Газета1 курс.jpg', 'Сертификат за 2 место в конкурсе газет')">
+                    <img src="./1 курс/Газета1 курс.jpg" alt="Сертификат за 2 место в конкурсе газет">
+                    <p>Сертификат за 2 место в конкурсе газет</p>
+                </div>
+                <div class="certificate-item" onclick="openModal('./1 курс/Диплом 1 курс.jpg', 'Диплом победителя Всероссийской олимпиады')">
+                    <img src="./1 курс/Диплом 1 курс.jpg" alt="Диплом победителя Всероссийской олимпиады">
+                    <p>Диплом победителя Всероссийской олимпиады</p>
+                </div>
+                <div class="certificate-item" onclick="openModal('./1 курс/Смотр строя 1курс.jpg', 'Смотр строя и песни')">
+                    <img src="./1 курс/Смотр строя 1курс.jpg" alt="Смотр строя">
+                    <p>Грамота за 3 место за участие в смотре строя и песни</p>
+                </div>
+            </div>
+                      <div class="horizontal-grid">
+                        <div class="horizontal-item" onclick="openModal('./1 курс/Абилимпикс 1курс.jpg', 'Сертификат за участие в Абилимпикс')">
+                            <img src="./1 курс/Абилимпикс 1курс.jpg" alt="Тест по истории Великой Отечественной войны">
+                            <p>Сертификат за участие в Абилимпикс</p>
+                        </div>
+                        <div class="horizontal-item" onclick="openModal('./1 курс/БГПУ 1 курс.jpg', 'Сертификат олимпиады Make It')">
+                            <img src="./1 курс/БГПУ 1 курс.jpg" alt="Сертификат олимпиады по программированию на языке Java">
+                            <p>Сертификат олимпиады Make It</p>
+                        </div>
+                        <div class="horizontal-item" onclick="openModal('./1 курс/Волонтерство баз.курс 1курс(1)_page-0001.jpg', 'Сертификат инклюзивного волонтера')">
+                            <img src="./1 курс/Волонтерство баз.курс 1курс(1)_page-0001.jpg" alt="Сертификат олимпиады по информационной безопасности">
+                            <p>Сертификат инклюзивного волонтера</p>
+                        </div>
+                        <div class="horizontal-item" onclick="openModal('./1 курс/грамота 1курс.jpg', 'Сертификат 3 места в квизе')">
+                            <img src="./1 курс/грамота 1курс.jpg" alt="Сертификат олимпиады по графическому дизайну">
+                            <p>Сертификат 3 места в квизе</p>
+                        </div>
+                        <div class="horizontal-item" onclick="openModal('./1 курс/Инклюзивное Тимлид 1курс.jpg', 'Сертификат инклюзивного волонтера уровня тимлидера')">
+                            <img src="./1 курс/Инклюзивное Тимлид 1курс.jpg" alt="Сертификат о Всероссийском тестировании базового уровня">
+                            <p>Сертификат инклюзивного волонтера уровня тимлидера</p>
+                        </div>
+                        <div class="horizontal-item" onclick="openModal('./1 курс/менеджер-1.png', 'Сертификат о прохождении курс менеджера местного сообщетсва')">
+                            <img src="./1 курс/менеджер-1.png" alt="Сертификат о Всероссийском тестировании продвинутого уровня">
+                            <p>Сертификат о прохождении курс менеджера местного сообщетсва</p>
+                        </div>
+                        <div class="horizontal-item" onclick="openModal('./1 курс/НКО-1.png', 'Сертификат о прохождении курса НКО')">
+                        <img src="./1 курс/НКО-1.png" alt="Сертификат о Всероссийском тестировании продвинутого уровня">
+                            <p>Сертификат о прохождении курса НКО</p>
+                        </div>
+                               <div class="horizontal-item" onclick="openModal('./1 курс/Сертификаты начинающие 1курс.jpg', 'Сертификат о прохождении оюучающей городской школы волонтеров')">
+                        <img src="./1 курс/Сертификаты начинающие 1курс.jpg" alt="Сертификат о Всероссийском тестировании продвинутого уровня">
+                            <p>Сертификат о прохождении обучающей городской школы волонтеров</p>
+                        </div>
+                        <div class="horizontal-item" onclick="openModal('./1 курс/Школа инклюзивного 1кукрс.jpg', 'Сертификат о прохождении школы инклюзивного волонтера')">
+                        <img src="./1 курс/Школа инклюзивного 1кукрс.jpg" alt="Сертификат о Всероссийском тестировании продвинутого уровня">
+                            <p>Сертификат о прохождении школы инклюзивного волонтера</p>
+                        </div>
+                         <div class="horizontal-item" onclick="openModal('./1 курс/Этнографический 1 курс.jpg', 'Сертификат о прохождении этнографического диактанта')">
+                        <img src="./1 курс/Этнографический 1 курс.jpg" alt="Сертификат о Всероссийском тестировании продвинутого уровня">
+                            <p>Сертификат о прохождении этнографического диактанта</p>
+                        </div>
+                    </div>
+            <!-- Модальное окно -->
+            <div id="myModal" class="modal">
+                <span class="close" onclick="closeModal()">&times;</span>
+                <img class="modal-content" id="modalImage">
+                <div class="modal-caption" id="caption"></div>
+            </div>
+        </main>
+        
+        <footer class="footer">
+            <p>&copy; 2023 Портфолио студента. Все права защищены.</p>
+        </footer>
+    </div>
+
+    <script>
+        // Функция открытия модального окна
+        function openModal(src, caption) {
+            const modal = document.getElementById('myModal');
+            const modalImg = document.getElementById('modalImage');
+            const captionText = document.getElementById('caption');
+            
+            modal.style.display = "block";
+            modalImg.src = src;
+            captionText.innerHTML = caption;
+            document.body.style.overflow = "hidden";
+        }
+        
+        // Функция закрытия модального окна
+        function closeModal() {
+            document.getElementById('myModal').style.display = "none";
+            document.body.style.overflow = "auto";
+        }
+        
+        // Закрытие по клику вне изображения
+        window.onclick = function(event) {
+            const modal = document.getElementById('myModal');
+            if (event.target == modal) {
+                closeModal();
+            }
+        }
+        
+        // Закрытие по клавише ESC
+        document.addEventListener('keydown', function(event) {
+            if (event.key === 'Escape') {
+                closeModal();
+            }
+        });
+    </script>
+</body>
+</html>
